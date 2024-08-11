@@ -1,5 +1,10 @@
 import Image from 'next/image';
+import AppDashboard from './AppDashboard/page';
 
-export default function Home() {
-  return <main className="">Hello World</main>;
+export default function App() {
+  return (
+    <main className="">
+      <AppDashboard />
+    </main>
+  );
 }

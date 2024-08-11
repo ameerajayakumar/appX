@@ -1,9 +1,13 @@
 ## Getting Started
 
-First, run the development server:
+### To run locally:
 
 ```bash
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Production Link:
+
+## Tech Stack:
