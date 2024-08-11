@@ -1,9 +1,9 @@
 {
-  "side-nav": [
+  "sidenav": [
     { "label": "App 1", "app": "RegistrationFormV1" },
     { "label": "App 2", "app": "RegistrationFormV2" },
-    { "label": "App 3", "app": "ReactIndexPage" },
+    { "label": "App 3", "app": "LoggedInPage" },
     { "label": "App 4", "app": "ReactFlowDiagram" },
-    { "label": "App 5", "app": "Application5" }
+    { "label": "App 5", "app": "SignInPage" }
   ]
 }

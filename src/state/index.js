@@ -11,7 +11,6 @@ export const globalSlice = createSlice({
   initialState,
   reducers: {
     setMenu(state, action) {
-      console.log('Initial State:', state);
       return { ...state, menu: action.payload };
     },
     loadApp(state, action) {
