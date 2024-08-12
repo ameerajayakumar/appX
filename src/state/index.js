@@ -4,6 +4,7 @@ const initialState = {
   menu: [],
   activeApp: null,
   dynamicComponents: {},
+  formData: {},
 };
 
 export const globalSlice = createSlice({
@@ -25,9 +26,18 @@ export const globalSlice = createSlice({
         },
       };
     },
+    saveFormData(state, action) {
+      return {
+        ...state,
+        formData: {
+          ...state.formData,
+          ...action.payload,
+        },
+      };
+    },
   },
 });
 
-export const { setMenu, loadApp, registerComponent } = globalSlice.actions;
+export const { setMenu, loadApp, registerComponent, saveFormData } = globalSlice.actions;
 
 export default globalSlice.reducer;
