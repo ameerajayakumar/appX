@@ -14,13 +14,13 @@ const SideNav = () => {
   };
 
   return (
-    <div className="flex flex-col w-60 md:w-56 bg-[#fafafaac] items-center">
+    <div className="flex flex-col w-64 md:w-60 bg-[#fafafaac] items-center">
       <div className="my-5 font-bold">Applications</div>
       <ul>
         {menu.map((item, index) => (
           <li
             key={index}
-            className="px-14 py-7 hover:bg-[#FFFFFF] w-full rounded hover:cursor-pointer font-semibold text-sm "
+            className="px-16 py-7 hover:bg-[#FFFFFF] w-full rounded hover:cursor-pointer font-semibold text-sm "
             onClick={() => selectApp(item.app)}
           >
             {item.label}
