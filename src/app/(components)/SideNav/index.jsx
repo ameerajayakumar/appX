@@ -4,9 +4,10 @@ import { loadApp } from '@/state';
 
 const SideNav = () => {
   const menu = useAppSelector((state) => state.global.menu);
-  const state = useAppSelector((state) => state.global);
   const dispatch = useAppDispatch();
-  // const activeapp = useAppSelector((state) => state.global.activeApp);
+
+  //delete below
+  const state = useAppSelector((state) => state.global);
   console.log('state is', state);
 
   const selectApp = (app) => {
@@ -14,8 +15,8 @@ const SideNav = () => {
   };
 
   return (
-    <div className="flex flex-col w-64 md:w-60 bg-[#fafafaac] items-center">
-      <div className="my-5 font-bold">Applications</div>
+    <div className="flex flex-col w-64 md:w-60 bg-[#fcfcfcd2]  items-center">
+      <div className="my-10 font-bold">Applications</div>
       <ul>
         {menu.map((item, index) => (
           <li
