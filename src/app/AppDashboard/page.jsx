@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useAppSelector } from '../redux';
+import ComponentLoader from '../(components)/Applications/ComponentLoader';
 
 const ViewPanel = () => {
   const activeApp = useAppSelector((state) => state.global.activeApp);
@@ -9,9 +10,14 @@ const ViewPanel = () => {
 
   useEffect(() => {
     if (activeApp) {
-      import(`../(components)/Applications/${activeApp}`).then((Component) => {
-        setLoadedApp(() => Component.default);
-      });
+      if (activeApp.includes('RegistrationForm')) {
+        // eslint-disable-next-line react/display-name
+        setLoadedApp(() => () => <ComponentLoader componentName="RegistrationForm" />);
+      } else {
+        import(`../(components)/Applications/${activeApp}`).then((Component) => {
+          setLoadedApp(() => Component.default);
+        });
+      }
     }
   }, [activeApp]);
 

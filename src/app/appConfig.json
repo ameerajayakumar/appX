@@ -1,9 +1,14 @@
 {
   "sidenav": [
-    { "label": "App 1", "app": "RegistrationFormV1" },
-    { "label": "App 2", "app": "RegistrationFormV2" },
+    { "label": "App 1", "app": "SignIn" },
+    { "label": "App 2", "app": "RegistrationForm" },
     { "label": "App 3", "app": "Profile" },
     { "label": "App 4", "app": "ReactFlowDiagram" },
-    { "label": "App 5", "app": "SignIn" }
-  ]
+    { "label": "App 5", "app": "Logout" }
+  ],
+  "components": {
+    "RegistrationForm": {
+      "version": "V2"
+    }
+  }
 }
