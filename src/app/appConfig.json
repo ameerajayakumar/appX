@@ -1,10 +1,10 @@
 {
   "sidenav": [
-    { "label": "App 1", "app": "SignIn" },
-    { "label": "App 2", "app": "RegistrationForm" },
-    { "label": "App 3", "app": "Profile" },
-    { "label": "App 4", "app": "ReactFlowDiagram" },
-    { "label": "App 5", "app": "Logout" }
+    { "label": "App 1", "app": "SignIn", "menuItems": ["Home", "Register", "Contact"] },
+    { "label": "App 2", "app": "RegistrationForm", "menuItems": ["Home", "Sign In", "Contact"] },
+    { "label": "App 3", "app": "Profile", "menuItems": ["Home", "Dashboard", "Profile"] },
+    { "label": "App 4", "app": "ReactFlowDiagram", "menuItems": ["Home", "Contact"] },
+    { "label": "App 5", "app": "Logout", "menuItems": ["Home", "Sign In", "Register"] }
   ],
   "components": {
     "RegistrationForm": {
