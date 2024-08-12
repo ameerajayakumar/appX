@@ -14,7 +14,7 @@ const AppLayout = ({ children }) => {
   return (
     <div className="flex w-full min-h-screen">
       <SideNav></SideNav>
-      <main className="flex flex-col w-full bg-[#ffffffbd]">{children}</main>
+      <main className="flex flex-col w-full ">{children}</main>
     </div>
   );
 };

@@ -15,14 +15,16 @@ const ViewPanel = () => {
     }
   }, [activeApp]);
 
-  return <div>{LoadedApp ? <LoadedApp /> : <></>}</div>;
+  return <>{LoadedApp ? <LoadedApp /> : <></>}</>;
 };
 
 const AppDashboard = () => {
   return (
-    <div>
+    <div className="bg-[#ffffffc4] h-full ">
       <div>Top Menu</div>
-      <ViewPanel />
+      <div className="flex flex-col justify-center items-center h-full">
+        <ViewPanel />
+      </div>
     </div>
   );
 };
