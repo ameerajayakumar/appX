@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '@/app/redux';
 import { loadApp } from '@/state';
+import Image from 'next/image';
 
 const SideNav = () => {
   const menu = useAppSelector((state) => state.global.menu);
@@ -15,13 +16,16 @@ const SideNav = () => {
   };
 
   return (
-    <div className="flex flex-col w-64 md:w-60 bg-[#fcfcfcd2]  items-center">
-      <div className="my-10 font-bold">Applications</div>
+    <div className="flex flex-col w-64 md:w-60 bg-[#e8e8ea91]  items-center">
+      <div className="my-10 flex justify-center items-center">
+        <Image src="/appicon.png" width={25} height={25} alt="AppX logo"></Image>
+        <p className="pl-2 font-extrabold text-lg">AppX</p>
+      </div>
       <ul>
         {menu.map((item, index) => (
           <li
             key={index}
-            className="px-16 py-7 hover:bg-[#FFFFFF] w-full rounded hover:cursor-pointer font-semibold text-sm "
+            className="px-16 py-7 hover:bg-[#e8e8ea58] w-full rounded hover:cursor-pointer font-semibold text-sm "
             onClick={() => selectApp(item.app)}
           >
             {item.label}

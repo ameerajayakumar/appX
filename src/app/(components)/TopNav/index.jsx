@@ -8,10 +8,10 @@ const TopNav = () => {
   const menuItems = activeAppConfig ? activeAppConfig.menuItems : [];
 
   return (
-    <nav className="p-4">
+    <nav className="p-3">
       <ul className="flex justify-end">
         {menuItems.map((item, index) => (
-          <li key={index} className="text-black hover:bg-gray-700 px-3 py-2 rounded">
+          <li key={index} className="hover:bg-[#f9f9f9e2] px-3 py-2 rounded cursor-pointer">
             {item}
           </li>
         ))}

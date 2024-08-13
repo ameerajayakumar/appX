@@ -10,7 +10,7 @@ const RegistrationFormV2 = () => {
     dispatch(saveFormData({ [name]: value }));
   };
   return (
-    <div className="flex flex-col w-64 items-center border rounded py-5">
+    <div className="flex flex-col w-64 items-center border rounded py-5 bg-white">
       <div className="text-lg font-semibold mb-10"> Registration Form (V2)</div>
       <input type="text" name="name" placeholder="Full Name" className="border rounded  mb-4" onChange={handleChange} />
       <input type="text" name="email" placeholder="Email" className="border rounded  mb-7" onChange={handleChange} />
