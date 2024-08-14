@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useAppDispatch, useAppSelector } from '@/app/redux';
 import { loadApp } from '@/state';
 import Image from 'next/image';
@@ -17,7 +17,7 @@ const SideNav = () => {
 
   return (
     <div className="flex flex-col w-64 md:w-60 bg-[#e8e8ea91]  items-center">
-      <div className="my-10 flex justify-center items-center">
+      <div className="my-10 flex justify-center items-center cursor-pointer" onClick={() => window.location.reload()}>
         <Image src="/appicon.png" width={25} height={25} alt="AppX logo"></Image>
         <p className="pl-2 font-extrabold text-lg">AppX</p>
       </div>
