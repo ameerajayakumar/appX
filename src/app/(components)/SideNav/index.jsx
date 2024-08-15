@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/app/redux';
 import { loadApp } from '@/state';
 import Image from 'next/image';
@@ -6,12 +6,14 @@ import Image from 'next/image';
 const SideNav = () => {
   const menu = useAppSelector((state) => state.global.menu);
   const dispatch = useAppDispatch();
+  const [selected, setSelected] = useState(false);
 
   //delete below
   const state = useAppSelector((state) => state.global);
   console.log('state is', state);
 
   const selectApp = (app) => {
+    setSelected(true);
     dispatch(loadApp(app));
   };
 
@@ -25,7 +27,9 @@ const SideNav = () => {
         {menu.map((item, index) => (
           <li
             key={index}
-            className="px-16 py-7 hover:bg-[#e8e8ea58] w-full rounded hover:cursor-pointer font-semibold text-sm "
+            className={`${
+              selected ? 'color-red' : 'color-black'
+            } px-16 py-7 hover:bg-[#e8e8ea58] w-full rounded hover:cursor-pointer font-semibold text-sm `}
             onClick={() => selectApp(item.app)}
           >
             {item.label}
