@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   menu: [],
   activeApp: null,
-  dynamicComponents: {},
+  // dynamicComponents: {},
   formData: {},
 };
 
@@ -19,11 +19,11 @@ export const globalSlice = createSlice({
     },
     registerComponent(state, action) {
       return {
-        ...state,
-        dynamicComponents: {
-          ...state.dynamicComponents,
-          [action.payload.name]: action.payload.component,
-        },
+        // ...state,
+        // dynamicComponents: {
+        //   ...state.dynamicComponents,
+        //   [action.payload.name]: action.payload.component,
+        // },
       };
     },
     saveFormData(state, action) {

@@ -13,7 +13,7 @@ const SideNav = () => {
   console.log('state is', state);
 
   const selectApp = (app) => {
-    setSelected(true);
+    setSelected(true); //test failed
     dispatch(loadApp(app));
   };
 
@@ -28,7 +28,7 @@ const SideNav = () => {
           <li
             key={index}
             className={`${
-              selected ? 'color-red' : 'color-black'
+              selected ? 'text-black' : 'text-black'
             } px-16 py-7 hover:bg-[#e8e8ea58] w-full rounded hover:cursor-pointer font-semibold text-sm `}
             onClick={() => selectApp(item.app)}
           >
