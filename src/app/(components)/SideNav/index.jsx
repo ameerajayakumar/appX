@@ -14,6 +14,7 @@ const SideNav = () => {
 
   const selectApp = (app) => {
     setSelected(true); //test failed
+    // not selected
     dispatch(loadApp(app));
   };
 
